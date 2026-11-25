@@ -43,7 +43,7 @@ const before = sha256(original);
 copyFileSync(SRC, DEST);
 
 const written = readFileSync(DEST);
-checkPng(written, "output entry.png");
+checkPng(written, "output PNG");
 const after = sha256(written);
 if (before !== after) {
   throw new Error("sha256 mismatch after copy: " + before + " vs " + after);

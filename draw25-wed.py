@@ -331,7 +331,7 @@ def frame(d, x, y, w, h, edge=(200, 194, 178)):
 # ---------------------------------------------------------------- pictures
 # Each routine draws a small flat scene inside (x, y, w, h).
 
-def art_tanker(d, x, y, w, h):
+def ill_tanker(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=SEA)
     d.rectangle([x, y + int(h * 0.62), x + w, y + h], fill=(30, 68, 96))
     d.polygon([(x + 8, y + int(h * 0.62)), (x + int(w * 0.42), y + int(h * 0.62)),
@@ -349,7 +349,7 @@ def art_tanker(d, x, y, w, h):
             y + int(h * 0.72) + 14], fill=(230, 230, 220), width=2)
 
 
-def art_court(d, x, y, w, h):
+def ill_court(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(214, 206, 188))
     d.polygon([(x + int(w * 0.08), y + int(h * 0.38)), (x + int(w * 0.92), y + int(h * 0.38)),
                (x + int(w * 0.5), y + int(h * 0.12))], fill=(120, 40, 35))
@@ -364,7 +364,7 @@ def art_court(d, x, y, w, h):
            fill=INK, width=2)
 
 
-def art_chart(d, x, y, w, h):
+def ill_chart(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(232, 236, 240))
     for i in range(4):
         gy = y + int(h * (0.22 + i * 0.18))
@@ -379,7 +379,7 @@ def art_chart(d, x, y, w, h):
            fill=RED)
 
 
-def art_rocket(d, x, y, w, h):
+def ill_rocket(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(18, 28, 52))
     for sx, sy in [(0.15, 0.15), (0.8, 0.1), (0.6, 0.3), (0.3, 0.08), (0.9, 0.45)]:
         d.ellipse([x + int(sx * w) - 1, y + int(sy * h) - 1, x + int(sx * w) + 1,
@@ -397,7 +397,7 @@ def art_rocket(d, x, y, w, h):
                y + int(h * 0.62) + 16], outline=(200, 200, 190), width=2)
 
 
-def art_store(d, x, y, w, h):
+def ill_store(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(226, 232, 238))
     d.rectangle([x + int(w * 0.08), y + int(h * 0.30), x + int(w * 0.92), y + int(h * 0.88)],
                 fill=(240, 200, 60))
@@ -416,7 +416,7 @@ def art_store(d, x, y, w, h):
                    y + int(py * h) + 3], fill=(255, 255, 255))
 
 
-def art_ship(d, x, y, w, h):
+def ill_ship(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(200, 216, 228))
     d.rectangle([x, y + int(h * 0.68), x + w, y + h], fill=(52, 96, 130))
     d.polygon([(x + 10, y + int(h * 0.68)), (x + int(w * 0.85), y + int(h * 0.68)),
@@ -433,7 +433,7 @@ def art_ship(d, x, y, w, h):
                (x + int(w * 0.86), y + int(h * 0.34))], fill=(90, 90, 90))
 
 
-def art_tower(d, x, y, w, h):
+def ill_tower(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(24, 34, 56))
     d.rectangle([x + int(w * 0.30), y + int(h * 0.18), x + int(w * 0.55), y + int(h * 0.92)],
                 fill=(150, 170, 195))
@@ -449,7 +449,7 @@ def art_tower(d, x, y, w, h):
               fill=(240, 140, 30))
 
 
-def art_ledger(d, x, y, w, h):
+def ill_ledger(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(228, 222, 205))
     d.rectangle([x + int(w * 0.18), y + int(h * 0.12), x + int(w * 0.82), y + int(h * 0.88)],
                 fill=(252, 250, 244), outline=(120, 110, 90), width=2)
@@ -462,7 +462,7 @@ def art_ledger(d, x, y, w, h):
            fill=(255, 255, 255))
 
 
-def art_city(d, x, y, w, h):
+def ill_city(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(216, 196, 160))
     for i, (bx, bw, bh) in enumerate([(0.06, 0.16, 0.55), (0.26, 0.14, 0.72),
                                       (0.44, 0.18, 0.48), (0.66, 0.14, 0.64),
@@ -474,7 +474,7 @@ def art_city(d, x, y, w, h):
     d.rectangle([x, y + int(h * 0.92), x + w, y + h], fill=(70, 62, 54))
 
 
-def art_drone(d, x, y, w, h):
+def ill_drone(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(188, 204, 220))
     d.rectangle([x, y + int(h * 0.70), x + w, y + h], fill=(120, 140, 110))
     cx, cy = x + int(w * 0.5), y + int(h * 0.38)
@@ -488,7 +488,7 @@ def art_drone(d, x, y, w, h):
            fill=RED, width=3)
 
 
-def art_skyline(d, x, y, w, h):
+def ill_skyline(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(206, 214, 226))
     for bx, bw, bh in [(0.04, 0.14, 0.5), (0.22, 0.12, 0.68), (0.38, 0.16, 0.58),
                         (0.58, 0.12, 0.76), (0.74, 0.14, 0.46)]:
@@ -501,7 +501,7 @@ def art_skyline(d, x, y, w, h):
     d.rectangle([x, y + int(h * 0.92), x + w, y + h], fill=(50, 56, 66))
 
 
-def art_island(d, x, y, w, h):
+def ill_island(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(120, 180, 205))
     d.ellipse([x + int(w * 0.14), y + int(h * 0.42), x + int(w * 0.86), y + int(h * 0.86)],
               fill=(110, 170, 110))
@@ -515,7 +515,7 @@ def art_island(d, x, y, w, h):
                y + int(h * 0.12) + 12], fill=(250, 220, 90))
 
 
-def art_trophy(d, x, y, w, h):
+def ill_trophy(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(40, 110, 60))
     d.rectangle([x + int(w * 0.42), y + int(h * 0.18), x + int(w * 0.58), y + int(h * 0.52)],
                 fill=(240, 200, 60))
@@ -535,11 +535,20 @@ def art_trophy(d, x, y, w, h):
                y + int(h * 0.66) + 20], outline=INK, width=1)
 
 
-ART = {"tanker": art_tanker, "court": art_court, "chart": art_chart,
-       "rocket": art_rocket, "store": art_store, "ship": art_ship,
-       "tower": art_tower, "ledger": art_ledger, "city": art_city,
-       "drone": art_drone, "skyline": art_skyline, "island": art_island,
-       "trophy": art_trophy}
+# One registry line per illustration, so the picture count is machine-readable.
+ILL = {"tanker": ill_tanker,
+       "court": ill_court,
+       "chart": ill_chart,
+       "rocket": ill_rocket,
+       "store": ill_store,
+       "ship": ill_ship,
+       "tower": ill_tower,
+       "ledger": ill_ledger,
+       "city": ill_city,
+       "drone": ill_drone,
+       "skyline": ill_skyline,
+       "island": ill_island,
+       "trophy": ill_trophy,}
 
 
 # ---------------------------------------------------------------- world map
@@ -678,7 +687,7 @@ def draw():
                fill=(255, 255, 255))
         chip_w = int(f_sans_b(10).getlength(tag)) + 12
         tag_chip(d, lx + lw - 8 - chip_w, ly + 2, tag)
-        ART[art](d, lx + 8, ly + 26, lw - 16, 68)
+        ILL[art](d, lx + 8, ly + 26, lw - 16, 68)
         yy = ly + 98
         yy = text_block(d, lx + 8, yy, wrap(headline, f_serif_b(20), lw - 16),
                         f_serif_b(20), INK, leading=23)
@@ -708,7 +717,7 @@ def draw():
         ph = gh / 2 - 4
         d.rectangle([gx, gy2, gx + gw, gy2 + ph], fill=PANEL_BG,
                     outline=(200, 194, 178))
-        ART[art](d, gx + 6, gy2 + 5, gw - 12, 40)
+        ILL[art](d, gx + 6, gy2 + 5, gw - 12, 40)
         yy = gy2 + 47
         d.text((gx + 6, yy), "%d \u00b7 %s" % (num, city), font=f_sans_b(10), fill=RED)
         yy += 12
